@@ -26,7 +26,25 @@ public class HomeWork {
         return result;
     }
 
-    // dem so phan tu bi trung nhau
+    public static ArrayList<Integer> bai_1_1(int[] inputArray){
+        ArrayList<Integer> result = new ArrayList<>();
+        boolean isCheck = false;
+        for(int i =0; i< inputArray.length; i++){
+            int number = inputArray[i];
+            for(int j=0; j< inputArray.length; j++){
+                if(number == inputArray[j] && i!=j){
+                    isCheck = true;
+                    break;
+                }
+            }
+            if(!isCheck){
+                result.add(number);
+            }
+        }
+        return result;
+    }
+
+    // dem so Phan Tu trong mang bi trung nhau
     public static int bai_2(int[] a){
         int count=0;
         for (int value : a) {
@@ -78,7 +96,7 @@ public class HomeWork {
     // phan tich n ra cac thua so nguyen to
     public static Serializable bai_5(int n){
         ArrayList<Integer> listResult = new ArrayList<>();
-        if(n==1){
+        if(n==1 || isNguyenTo(n)){
             return "N không phân tích được ra thừa số nguyên tố";
         }
         int i = 2;
