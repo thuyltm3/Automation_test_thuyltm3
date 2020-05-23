@@ -14,4 +14,6 @@
   - Settup biến môi trường cho maven: M2_HOME = path(đường dẫn tới thư mục maven)
   -> Add JAVA_HOME, M2_HOME vào path chung
   
+ * Tạo 1 project mới bằng commandline: mvn archetype:generate -Dfilter=quickstart 
+  
   
